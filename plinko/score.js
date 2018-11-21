@@ -11,10 +11,7 @@ function onScoreUpdate(dropPosition, bounciness, size, bucketLabel) {
 }
 
 function runAnalysis() {
-  // Write code here to analyze stuff
-	const bucket = 
-
-console.log('your point will probably fall into',bucket);
+  
 }
 
 
