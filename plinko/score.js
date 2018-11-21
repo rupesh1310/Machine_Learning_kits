@@ -64,11 +64,12 @@ function minMax(data, featureCount) {
 
 	for(let i = 0; i < featureCount; i++){
 		const column = clonedData.map(row => row[i]);
-
 		const min = _.min(column);
 		const max = _.max(column);
-	for(let j = 0; j < clonedData.length; j++) {		
 
+	for(let j = 0; j < clonedData.length; j++) {
+		clonedData[j][i] = (clonedData[j][i] - min) / (max - min);
 		}
 	}
+	return clonedData;
 }
