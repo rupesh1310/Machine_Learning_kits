@@ -18,7 +18,7 @@ console.log('your point will probably fall into',bucket);
 }
 
 
-function knn(data) {
+function knn(data, point) {
 	return _.chain(data)
 	.map(row => [distance(row[0]), row[3]])
 	.sortBy(row => row[0])
@@ -33,7 +33,7 @@ function knn(data) {
 }
 
 
-function distance(point) {
+function distance(pointA, pointB) {
 	return Math.abs(point - predictionPoint);
 }
 
