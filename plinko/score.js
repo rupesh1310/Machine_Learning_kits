@@ -24,6 +24,9 @@ let numberCorrect = 0;
  	}
 
  	console.log('Accuracy:', numberCorrect / testSetSize);
+		._chain(testSet)
+ 	._filter(testPoint => knn(trainingSet, testPoint[0]) === testPoint[3])
+
 }
 
 function knn(data, point) {
