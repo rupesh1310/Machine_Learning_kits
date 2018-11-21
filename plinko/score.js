@@ -24,9 +24,13 @@ let numberCorrect = 0;
  	}
 
  	console.log('Accuracy:', numberCorrect / testSetSize);
-		._chain(testSet)
+ 	const accuracy = ._chain(testSet)
  	._filter(testPoint => knn(trainingSet, testPoint[0]) === testPoint[3])
+ 	.size()
+ 	.divide(testSetSize)
+ 	.value();
 
+ 	console.log('Accuracy is', accuracy);
 }
 
 function knn(data, point) {
