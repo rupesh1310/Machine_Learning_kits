@@ -24,8 +24,8 @@ let numberCorrect = 0;
  	}
 
  	console.log('Accuracy:', numberCorrect / testSetSize);
- 	const accuracy = ._chain(testSet)
- 	._filter(testPoint => knn(trainingSet, testPoint[0]) === testPoint[3])
+ 	const accuracy = _.chain(testSet)
+ 	.filter(testPoint => knn(trainingSet, testPoint[0]) === testPoint[3])
  	.size()
  	.divide(testSetSize)
  	.value();
