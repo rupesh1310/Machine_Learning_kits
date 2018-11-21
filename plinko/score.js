@@ -12,7 +12,14 @@ function onScoreUpdate(dropPosition, bounciness, size, bucketLabel) {
 
 function runAnalysis() {
   // Write code here to analyze stuff
-	const bucket = _.chain(outputs)
+	const bucket = 
+
+console.log('your point will probably fall into',bucket);
+}
+
+
+function knn() {
+	return _.chain(outputs)
 	.map(row => [distance(row[0]), row[3]])
 	.sortBy(row => row[0])
 	.slice(0,k)
@@ -23,9 +30,8 @@ function runAnalysis() {
 	.first()
 	.parseInt()
 	.value();
-
-console.log('your point will probably fall into',bucket);
 }
+
 
 function distance(point) {
 	return Math.abs(point - predictionPoint);
