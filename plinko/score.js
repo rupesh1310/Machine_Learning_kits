@@ -13,8 +13,8 @@ function runAnalysis() {
  const [testSet, trainingSet] = splitDataset(outputs, 10);
 
  for (let i = 0; i < testSet.length; i++){
- 	knn(trainingSet, testSet[i])
-
+ 	const bucket = knn(trainingSet, testSet[i][0]);
+ 	console.log(bucket);
  	}
 
 }
