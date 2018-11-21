@@ -9,11 +9,15 @@ function onScoreUpdate(dropPosition, bounciness, size, bucketLabel) {
 
   console.log(outputs);
 }
-
 function runAnalysis() {
-  splitDataset(outputs, 10);
-}
+ const [testSet, trainingSet] = splitDataset(outputs, 10);
 
+ for (let i = 0; i < testSet.length; i++){
+ 	knn(trainingSet, testSet[i])
+
+ 	}
+
+}
 
 function knn(data, point) {
 	return _.chain(data)
