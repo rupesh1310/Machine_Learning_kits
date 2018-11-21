@@ -60,7 +60,7 @@ function splitDataset(data, testCount) {
 }
 
 function minMax(data, featureCount) {
-	const clonedData = _.clonedData(data);
+	const clonedData = _.clonedDeep(data);
 
 	for(let i = 0; i < featureCount; i++){
 		const column = clonedData.map(row => row[i]);
