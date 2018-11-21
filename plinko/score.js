@@ -60,5 +60,5 @@ function splitDataset(data, testCount) {
 }
 
 function minMax(data, featureCount) {
-	
+	const clonedData = _.clonedData(data);
 }
