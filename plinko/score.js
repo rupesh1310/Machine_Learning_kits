@@ -59,3 +59,6 @@ function splitDataset(data, testCount) {
 
 }
 
+function minMax(data, featureCount) {
+	
+}
