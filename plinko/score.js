@@ -11,7 +11,7 @@ function onScoreUpdate(dropPosition, bounciness, size, bucketLabel) {
 }
 
 function runAnalysis() {
-  
+  splitDataset(outputs, 10);
 }
 
 
