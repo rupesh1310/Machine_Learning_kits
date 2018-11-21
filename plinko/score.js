@@ -18,8 +18,8 @@ console.log('your point will probably fall into',bucket);
 }
 
 
-function knn() {
-	return _.chain(outputs)
+function knn(data) {
+	return _.chain(data)
 	.map(row => [distance(row[0]), row[3]])
 	.sortBy(row => row[0])
 	.slice(0,k)
