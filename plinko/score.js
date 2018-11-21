@@ -7,7 +7,7 @@ function onScoreUpdate(dropPosition, bounciness, size, bucketLabel)
 
 function runAnalysis() {
 	const testSetSize = 100;
- 	const [testSet, trainingSet] = splitDataset(outputs, testSetSize);
+ 	const [testSet, trainingSet] = splitDataset(minMax(outputs, 3), testSetSize);
 
 
  	_.range(1, 20).forEach(k => {
