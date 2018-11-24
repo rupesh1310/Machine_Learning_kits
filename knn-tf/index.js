@@ -29,6 +29,6 @@ let { features, labels, testFeatures, testLabels } = loadCSV('kc_house_data.csv'
 
 features = tf.tensor(features);
 labels = tf.tensor(labels);
-testFeatures = tf.tensor(testFeatures);
-testLabels = tf.tensor(testLabels);
-const result = knn();
+
+const result = knn(features, labels, tf.tensor(testFeatures[0]), 10);
+console.log('Guess', result);
