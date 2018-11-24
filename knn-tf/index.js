@@ -26,5 +26,9 @@ let { features, labels, testFeatures, testLabels } = loadCSV('kc_house_data.csv'
 	labelColumns: ['price']
 });
 
-console.log(testFeatures);
-console.log(testLabels);
+
+features = tf.tensor(features);
+labels = tf.tensor(labels);
+testFeatures = tf.tensor(testFeatures);
+testLabels = tf.tensor(testLabels);
+const result = knn();
