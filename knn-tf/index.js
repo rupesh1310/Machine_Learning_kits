@@ -26,6 +26,5 @@ let { features, labels, testFeatures, testLabels } = loadCSV('kc_house_data.csv'
 	labelColumns: ['price']
 });
 
-
 console.log(testFeatures);
 console.log(testLabels);
