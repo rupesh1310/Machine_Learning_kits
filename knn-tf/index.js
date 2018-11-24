@@ -31,4 +31,6 @@ features = tf.tensor(features);
 labels = tf.tensor(labels);
 
 const result = knn(features, labels, tf.tensor(testFeatures[0]), 10);
-console.log('Guess', result, testLabels[0][0]);
+const err = (testLabels[0][0] -result) / testLabels[0][0];
+// console.log('Guess', result, testLabels[0][0]);
+console.log('Error', err);
