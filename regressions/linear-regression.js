@@ -5,7 +5,7 @@ class LinearRegression{
     constructor(features,labels, options) {
         this.features = features;
         this.labels = labels;
-        this.options = Object.assign({ LinearRate: 0.1, iterations: 1000}, 
+        this.options = Object.assign({ learningRate: 0.1, iterations: 1000}, 
             
         options       
         );
@@ -24,6 +24,8 @@ class LinearRegression{
       const mSlope = _.sum(currentGuessesForMPG.map((guess, i) => {
         return -1 * this.features[i] [0] * (this.labels[i][0] - guess);
       })) * 2 /this.features.length;
+      this.m = this.m - mSlope * thisoptions.learningRate;
+      this.b = this.b - bslope * this.options.learningRate;
     }
 
 
