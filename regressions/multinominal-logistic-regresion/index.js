@@ -12,13 +12,16 @@ const { features, labels, testFeatures, testLabels } = loadCSV(
     shuffle: true,
     splitTest: 50,
     converters: {
-      mpg: value => {
-        return value === 'TRUE' ? 1 : 0;
+    mpg: value => {
+        const mpg = parseFloat(value);  
+        
+        if(mpg < 15){
+        return [1,0,0];
+        }
       }
     }
   }
 );
-
 const regression = new LogisticRegression(features, labels, {
   learningRate: 0.5,
   iterations: 100,
