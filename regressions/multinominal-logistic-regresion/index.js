@@ -8,11 +8,11 @@ const { features, labels, testFeatures, testLabels } = loadCSV(
   '../data/cars.csv',
   {
     dataColumns: ['horsepower', 'displacement', 'weight'],
-    labelColumns: ['passedemissions'],
+    labelColumns: ['mpg'],
     shuffle: true,
     splitTest: 50,
     converters: {
-      passedemissions: value => {
+      mpg: value => {
         return value === 'TRUE' ? 1 : 0;
       }
     }
