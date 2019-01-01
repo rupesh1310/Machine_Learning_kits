@@ -32,13 +32,6 @@ const regression = new LogisticRegression(features, labels, {
   iterations: 100,
   batchSize: 10
 });
+
 regression.weights.print();
-
-
-// regression.train();
-
-// console.log(regression.test(testFeatures, testLabels));
-
-// plot({
-//   x: regression.costHistory.reverse()
-// });
+regression.train();
