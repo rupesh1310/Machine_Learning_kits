@@ -35,3 +35,6 @@ const regression = new LogisticRegression(features, labels, {
 
 regression.weights.print();
 regression.train();
+regression.predict([
+  [215,440,2.16]
+]);
