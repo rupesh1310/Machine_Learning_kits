@@ -33,4 +33,5 @@ const regression = new LogisticRegression(features, labels, {
   batchSize: 10
 });
 regression.train();
-regression.predict([[215,440,2.16]]).print();
+regression.predict([[150,200,2.223]]).print();
+
