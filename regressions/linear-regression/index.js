@@ -4,12 +4,15 @@ const loadCSV = require('../load-csv');
 const LinearRegression = require('./linear-regression');
 const plot = require('node-remote-plot');
 
-let { features, labels, testFeatures, testLabels } = loadCSV('../data/cars.csv', {
-  shuffle: true,
-  splitTest: 50,
-  dataColumns: ['horsepower', 'weight', 'displacement'],
-  labelColumns: ['mpg']
-});
+let { features, labels, testFeatures, testLabels } = loadCSV(
+  '../data/cars.csv',
+  {
+    shuffle: true,
+    splitTest: 50,
+    dataColumns: ['horsepower', 'weight', 'displacement'],
+    labelColumns: ['mpg']
+  }
+);
 
 const regression = new LinearRegression(features, labels, {
   learningRate: 0.1,
