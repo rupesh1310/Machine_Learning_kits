@@ -11,27 +11,32 @@ const { features, labels, testFeatures, testLabels } = loadCSV(
     labelColumns: ['mpg'],
     shuffle: true,
     splitTest: 50,
-    converters: {
-    mpg: value => {
-        const mpg = parseFloat(value);  
-        
+    converters: {     
+      mpg: value => {
+       const mpg = parseFloat(value);   
         if(mpg < 15){
         return [1,0,0];
+        } else if(mpg < 30) {
+          return [0,1,0];
+        } else {
+          return [0,0,1];
         }
       }
     }
   }
 );
-const regression = new LogisticRegression(features, labels, {
-  learningRate: 0.5,
-  iterations: 100,
-  batchSize: 10
-});
+console.log(labels);
 
-regression.train();
+// const regression = new LogisticRegression(features, labels, {
+//   learningRate: 0.5,
+//   iterations: 100,
+//   batchSize: 10
+// });
 
-console.log(regression.test(testFeatures, testLabels));
+// regression.train();
 
-plot({
-  x: regression.costHistory.reverse()
-});
+// console.log(regression.test(testFeatures, testLabels));
+
+// plot({
+//   x: regression.costHistory.reverse()
+// });
