@@ -3,6 +3,7 @@ const tf = require('@tensorflow/tfjs');
 const loadCSV = require('../load-csv');
 const LogisticRegression = require('./logistic-regression');
 const plot = require('node-remote-plot');
+const _ = require('lodash');
 
 const { features, labels, testFeatures, testLabels } = loadCSV(
   '../data/cars.csv',
@@ -11,9 +12,10 @@ const { features, labels, testFeatures, testLabels } = loadCSV(
     labelColumns: ['mpg'],
     shuffle: true,
     splitTest: 50,
-    converters: {     
+    converters: {
       mpg: value => {
-       const mpg = parseFloat(value);   
+        const mpg = parseFloat(value);  
+        
         if(mpg < 15){
         return [1,0,0];
         } else if(mpg < 30) {
@@ -25,7 +27,7 @@ const { features, labels, testFeatures, testLabels } = loadCSV(
     }
   }
 );
-console.log(labels);
+console.log(_.flatMap(labels));
 
 // const regression = new LogisticRegression(features, labels, {
 //   learningRate: 0.5,
