@@ -27,13 +27,13 @@ const { features, labels, testFeatures, testLabels } = loadCSV(
     }
   }
 );
-console.log(_.flatMap(labels));
+const regression = new LogisticRegression(features, labels, {
+  learningRate: 0.5,
+  iterations: 100,
+  batchSize: 10
+});
+regression.weights.print();
 
-// const regression = new LogisticRegression(features, labels, {
-//   learningRate: 0.5,
-//   iterations: 100,
-//   batchSize: 10
-// });
 
 // regression.train();
 
