@@ -1,7 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://library.kissclipart.com/20180925/yoe/kissclipart-javascript-clipart-javascript-library-jquery-0fb817622aa27de4.png" alt="
- Machine Learning With JavaScript" width="200"></a>
+  <img src="https://library.kissclipart.com/20180925/yoe/kissclipart-javascript-clipart-javascript-library-jquery-0fb817622aa27de4.png" alt="Machine Learning With JavaScript" width="200"></a>
   <br>
  Machine Learning With JavaScript
   <br>
