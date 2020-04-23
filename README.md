@@ -7,6 +7,13 @@
   <br>
 </h1>
 
+<h4 align="center">A repository to keep track of all my progess <a href="#" target="_blank">Machine Learning With JavaScript</a>.</h4>
+ <p align="center">
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#build-with">Build With</a> •
+  <a href="#installation">Installation</a> • 
+  <a href="#future-updates">Future Updates</a> • 
+</p>
 
 
 
